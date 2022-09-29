@@ -77,7 +77,7 @@ const thoughtController = {
         }
         // delete the reference to deleted thought in user's thought array
         User.findOneAndUpdate(
-          { username: dbThoughtData.username },
+          { userName: dbThoughtData.userName },
           { $pull: { thoughts: params.id } }
         )
           .then(() => {

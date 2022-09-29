@@ -11,6 +11,7 @@ Backend API of the Social Media Application to add user, friends, thoughts and r
 - [Contribution](#Contribution)
 - [Questions](#Questions)
 - [Screenshots](#Screenshots)
+- [Walkthrough](#Walkthrough)
 
 ## Installation
 
@@ -18,7 +19,7 @@ Backend API of the Social Media Application to add user, friends, thoughts and r
 
 ## Usage
 
-- npm start
+- node server
 
 ## Contribution
 
@@ -34,3 +35,7 @@ Sumit Ojha
 ![](./assets/images/Screenshot-01.jpg)
 ![](./assets/images/Screenshot-02.jpg)
 ![](./assets/images/Screenshot-03.jpg)
+
+## Walkthrough
+
+https://www.youtube.com/watch?v=u8NEAEjgvC0

@@ -1,37 +1,48 @@
 const { Schema, model } = require("mongoose");
 
-const UserSchema = new Schema(
+// Schema to create User model
+const userSchema = new Schema(
   {
-    userName: {
+    username: {
       type: String,
       required: true,
-      trim: true,
       unique: true,
+      trim: true,
     },
     email: {
       type: String,
       required: true,
       unique: true,
-      match: [/.+@.+\..+/],
+      match: [
+        /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+        "Your email is incorrect, please try again",
+      ],
     },
-    thoughts: [{ type: Schema.Types.ObjectId, ref: "Thought" }],
-    friends: [{ type: Schema.Types.ObjectId, ref: "User" }],
+    thoughts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Thoughts",
+      },
+    ],
+    friends: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "User",
+      },
+    ],
   },
   {
     toJSON: {
       virtuals: true,
-      getters: true,
     },
     id: false,
   }
 );
 
-UserSchema.virtual("friendCount").get(function () {
+userSchema.virtual("friendCount").get(function () {
   return this.friends.length;
 });
 
-// create the user model using the UserSchema
-const User = model("User", UserSchema);
+const User = model("user", userSchema);
 
-// export the User model
 module.exports = User;
