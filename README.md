@@ -32,9 +32,9 @@ Sumit Ojha
 
 ## Screenshots
 
-![](./assets/images/Screenshot-01.jpg)
-![](./assets/images/Screenshot-02.jpg)
-![](./assets/images/Screenshot-03.jpg)
+![](./assets/images/Screenshot-1.jpg)
+![](./assets/images/Screenshot-2.jpg)
+![](./assets/images/Screenshot-3.jpg)
 
 ## Walkthrough
 
